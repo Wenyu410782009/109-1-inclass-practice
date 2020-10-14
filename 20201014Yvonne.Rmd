@@ -1,0 +1,112 @@
+---
+title: "20201014Yvonne"
+author: "Yvonne"
+date: "10/14/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r}
+num1 <- 5
+vNum1 <- c(2,5)
+vNum2 <- c(2, num1)
+```
+
+
+
+```{r}
+num <- c(1.5, 2, 3)
+int <- c(1L, 3L, -2L)
+char <- c("1.5","2","3")
+logi <- c(T,T,F)
+
+typeof(num)
+typeof(int)
+typeof(char)
+typeof(logi)
+```
+
+```{r}
+num1 <- 5
+vNum1 <- c(2,5)
+vNum2 <- c(2, num1)
+num1 <- 5
+num2 <- c(5)
+vNum11 <- c(-1,5)
+vNum21 <- c(2,3)
+vNum31 <- c(vNum1,vNum2)
+vNum41 <- c(-1,5,2,3)
+vNum51 <- c(c(-1,5),c(2,3))
+```
+
+
+```{r}
+# 10位學生的主系
+majors10_char <- c('經濟學系','社會學系','社會學系','經濟學系','經濟學系','社會學系','經濟學系','經濟學系','經濟學系','社會學系')
+
+typeof(majors10_char)
+class(majors10_char)
+majors10_factor <- factor(majors10_char)
+# 或
+majors10_factor <- factor(
+  c('經濟學系','社會學系','社會學系','經濟學系','經濟學系','社會學系','經濟學系','經濟學系','經濟學系','社會學系')
+)
+
+typeof(majors10_factor)
+class(majors10_factor)
+majors10_char
+```
+
+```{r}
+majors10_char
+```
+
+
+```{r}
+majors10_factor
+```
+
+
+```{r}
+as.integer(majors10_factor) 
+```
+
+
+```{r}
+stringInteger <- c("1","2","-11")
+class(stringInteger) # 無法進行數值運算
+
+trueInteger <- as.integer(stringInteger)
+class(trueInteger) # 可以進行數值運算
+typeof(trueInteger)
+trueInteger+2
+as.integer(stringInteger)
+class(stringInteger)
+stringInteger <- as.integer(stringInteger)
+class(stringInteger)
+studentId <- c(410782009, 410782016)
+```
+
